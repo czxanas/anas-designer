@@ -10,20 +10,21 @@
 
 /* Global styles */
 :root {
-    --color-primary: theme-color('primary');
-    --color-secondary: theme-color('secondary');
+    --color-primary: var(--color-white);
+    --color-secondary: var(--color-black);
+    /* dark-gray & light-dark are declared in tailwind.css file */
 }
 
 html {
     /* font-family: theme('fontFamily.sans'); */
-    font-family: Inter;
-    font-weight: 400;
+    /* font-family: Inter; */
+    /* font-weight: 400; */
     /* font-size: 1.1rem; */
 }
 
 body {
     background: var(--color-secondary);
-    color: var(--color-primary);
+    color: var(--color-soft-gray);
 }
 
 ::selection {

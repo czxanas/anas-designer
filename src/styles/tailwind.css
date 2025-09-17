@@ -6,16 +6,18 @@
 }
 
 @theme {
-    --font-serif: 'Times New Roman', serif;
-    --font-sans: 'Arial', sans-serif;
+    --font-sans: 'Inter', 'Arial', sans-serif;
+    /* --font-serif: 'Times New Roman', serif; */
 
-    --text-heading-xl: utopia.clamp(60, 120);
-    --text-heading-lg: utopia.clamp(48, 80);
-    --text-body-sm: utopia.clamp(14, 16);
-    --text-button: utopia.clamp(16, 20);
+    --text-h1: clamp(2.25rem, 2.0966rem + 0.6818vw, 2.625rem);
+    --text-h2: clamp(1.625rem, 1.4716rem + 0.6818vw, 2rem);
+    --text-base: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem);
+    --text-label: clamp(0.875rem, 0.8239rem + 0.2273vw, 1rem);
 
     --color-black: #000000;
     --color-white: #ffffff;
+    --color-soft-gray: #C8C8C8;
+    --color-dark-gray: #414141;
 
     --spacing-unit-sm: var(--unit-sm);
     --spacing-unit-md: var(--unit-md);
