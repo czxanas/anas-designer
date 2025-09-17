@@ -1,4 +1,5 @@
 ---
+import ButtonPrimary from '../components/buttons/button-primary.astro';
 import Layout from '../layouts/Layout.astro';
 
 const seo = {
@@ -31,5 +32,9 @@ const seo = {
 <Layout title="Home" seo={seo}>
     <section class="container max-w-lg">
         Hello World!
+        <br>
+        <ButtonPrimary type='primary' label='Primary' />
+        <ButtonPrimary type='secondary' label='Secondary' />
+        <ButtonPrimary type='option' label='Option' />
     </section>
 </Layout>

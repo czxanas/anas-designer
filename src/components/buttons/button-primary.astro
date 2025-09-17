@@ -1,0 +1,12 @@
+---
+interface Props {
+  type?: 'primary' | 'secondary' | 'option'; // restrict to known values
+  label: string; // text inside button
+}
+
+const { type = 'primary', label } = Astro.props;
+---
+
+<button class={`button-${type}`} type="button">
+  {label}
+</button>

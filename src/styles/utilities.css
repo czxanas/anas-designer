@@ -4,3 +4,22 @@
     @apply px-unit-sm mx-auto w-full;
     @apply max-w-none;
 }
+
+@utility button-primary {
+    @apply px-4 py-3.5 rounded-full cursor-pointer;
+    @apply flex items-center justify-center;
+    @apply bg-white text-black;
+}
+
+@utility button-secondary {
+    @apply px-4 py-3.5 rounded-full cursor-pointer;
+    @apply flex items-center justify-center;
+    @apply bg-transparent text-white;
+}
+
+@utility button-option {
+    @apply px-4 py-3.5 rounded-full cursor-pointer;
+    @apply flex items-center justify-center;
+    @apply bg-dark-gray text-white;
+}
+
