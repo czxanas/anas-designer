@@ -1,12 +1,15 @@
 ---
+// Button.astro
 interface Props {
-  type?: 'primary' | 'secondary' | 'option'; // restrict to known values
-  label: string; // text inside button
+  type?: 'primary' | 'secondary' | 'option';
+  label: string;
+  htmlType?: 'button' | 'submit' | 'reset';
+  [key: string]: any;
 }
 
-const { type = 'primary', label } = Astro.props;
+const { type = 'primary', label, htmlType = 'button', class: _ignore, ...rest } = Astro.props;
+const cls = `button-${type}`;
 ---
-
-<button class={`button-${type}`} type="button">
+<button class={cls} type={htmlType} {...rest}>
   {label}
 </button>
