@@ -1,15 +1,29 @@
 ---
 // Button.astro
+
 interface Props {
   type?: 'primary' | 'secondary' | 'option';
   label: string;
-  htmlType?: 'button' | 'submit' | 'reset';
+  class?: string;
   [key: string]: any;
 }
 
-const { type = 'primary', label, htmlType = 'button', class: _ignore, ...rest } = Astro.props;
-const cls = `button-${type}`;
+const { type = 'primary', label, class: className, ...rest } = Astro.props;
+
+const typeClasses: Record<string, string> = {
+  primary: "px-4 py-3.5 rounded-full cursor-pointer flex items-center justify-center bg-white text-black",
+  secondary: "px-4 py-3.5 rounded-full cursor-pointer flex items-center justify-center bg-transparent text-white",
+  option: "px-4 py-3.5 rounded-full cursor-pointer flex items-center justify-center bg-dark-gray text-white",
+};
 ---
-<button class={cls} type={htmlType} {...rest}>
+
+<button
+  class:list={[
+    typeClasses[type] ?? typeClasses.primary,
+    className
+  ]}
+  type="button"
+  {...rest}
+>
   {label}
 </button>
