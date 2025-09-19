@@ -1,0 +1,78 @@
+---
+import { Image } from 'astro:assets';
+import ButtonPrimary from '../components/buttons/button-primary.astro';
+import Layout from '../layouts/Layout.astro';
+import figma from '../assets/images/figma.webp';
+import openAi from '../assets/images/open-ai.webp';
+import github from '../assets/images/github.webp';
+
+const seo = {
+    // title: 'Astro Boilerplate - Home',
+    // description: 'A minimal and powerful Astro boilerplate for fast web development.',
+    // social: {
+    //     facebook: {
+    //         title: 'Astro Boilerplate - Facebook',
+    //         description: 'A minimal starter built with Astro. Fast, clean and scalable.',
+    //         image: {
+    //             url: '/cover-home.jpg' // You can change this path if you have a different image
+    //         }
+    //     },
+    //     twitter: {
+    //         creator: '@anas_dev',
+    //         title: 'Astro Boilerplate - Twitter',
+    //         description: 'Start fast with this clean Astro boilerplate.',
+    //         image: {
+    //             url: '/cover-home.jpg'
+    //         }
+    //     }
+    // },
+    // advanced: {
+    //     robots: ['index', 'follow'],
+    //     canonical: 'https://yourdomain.com/' // replace with your real domain
+    // }
+};
+---
+
+<Layout title="Home" seo={seo}>
+    <!-- It's is up by 15px: The width  -->
+    <a href="/" class="w-fit h-fit fixed top-10 left-5 -translate-y-[15px]">
+        <ButtonPrimary label="  ←  " type="option" />
+    </a>
+
+    <section class="container max-w-lg mt-45 text-center">
+        <h1 class="text-h1 leading-[1.4] clip-gradient">Designer & Developer</h1>
+        <div class="w-fit text-base max-w-90 mt-6.25 mx-auto">
+            It's that simple, a designer who can code, a developer who can design.
+        </div>
+    </section>
+
+    <section class="container max-w-xl text-base mt-33">
+        <p>
+            It is a long established fact that a reader will be distracted by the readable content
+            of a page when looking at its layout but sometimes on purpose.
+        </p>
+        <br />
+        <p>
+            The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+            letters, as opposed to using 'Content here, content here', making it look like readable
+            English.
+        </p>
+    </section>
+
+    <section class="container max-w-xl leading-[1.2] flex flex-col gap-3.75 text-base mt-25">
+        <h2 class="text-white mb-5">Principales</h2>
+        <div class="relative"><span class="absolute -translate-x-4">.</span>Build for humans, not users.</div>
+        <div class="relative"><span class="absolute -translate-x-4">.</span>Speed matters.</div>
+        <div class="relative"><span class="absolute -translate-x-4">.</span>Simplicity wins.</div>
+        <div class="relative"><span class="absolute -translate-x-4">.</span>Delight through details.</div>
+        <div class="relative"><span class="absolute -translate-x-4">.</span>Consistency builds trust.</div>
+        <div class="relative"><span class="absolute -translate-x-4">.</span>Accessibility is essential.</div>
+    </section>
+    
+    <section class="container max-w-xl leading-[1.2] flex flex-col gap-3.75 text-base mt-13.75 mb-30">
+        <h2 class="text-white mb-5">Tools I use daily</h2>
+        <div class="grid grid-cols-4">
+            <Image src={figma} width={32} height={50} alt="Figma" />
+        </div>
+    </section>
+</Layout>

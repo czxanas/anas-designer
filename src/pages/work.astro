@@ -1,0 +1,69 @@
+---
+import ButtonPrimary from '../components/buttons/button-primary.astro';
+import Layout from '../layouts/Layout.astro';
+
+const seo = {
+    // title: 'Astro Boilerplate - Home',
+    // description: 'A minimal and powerful Astro boilerplate for fast web development.',
+    // social: {
+    //     facebook: {
+    //         title: 'Astro Boilerplate - Facebook',
+    //         description: 'A minimal starter built with Astro. Fast, clean and scalable.',
+    //         image: {
+    //             url: '/cover-home.jpg' // You can change this path if you have a different image
+    //         }
+    //     },
+    //     twitter: {
+    //         creator: '@anas_dev',
+    //         title: 'Astro Boilerplate - Twitter',
+    //         description: 'Start fast with this clean Astro boilerplate.',
+    //         image: {
+    //             url: '/cover-home.jpg'
+    //         }
+    //     }
+    // },
+    // advanced: {
+    //     robots: ['index', 'follow'],
+    //     canonical: 'https://yourdomain.com/' // replace with your real domain
+    // }
+};
+---
+
+<Layout title="Home" seo={seo}>
+    <!-- It's is up by 15px: The width  -->
+    <a href="/" class="w-fit h-fit fixed top-10 left-5 -translate-y-[15px]">
+        <ButtonPrimary label="  ←  " type="option" />
+    </a>
+
+    <section class="container max-w-lg mt-45 text-center">
+        <h1 class="text-h1 leading-[1.4] clip-gradient">Everything I built</h1>
+        <div class="w-fit text-base max-w-75 mt-6.25 mx-auto">
+            It’s that simple, a designer who can code, a developer who can design.
+        </div>
+    </section>
+
+    <section class="container max-w-lg text-base mt-40">
+        <div class="w-fit h-fit flex items-center gap-2 mx-auto">
+            <ButtonPrimary label="  All  " type="option" />
+            <ButtonPrimary label="Projects" type="secondary" />
+            <ButtonPrimary label="Experiments" type="secondary" />
+        </div>
+    </section>
+
+    <section
+        class="container max-w-xl leading-[1.2] flex flex-col gap-3.75 text-base mt-12.5 mb-30"
+    >
+        <a href="/" class="flex justify-between">
+            <div>A line ruler experience</div>
+            <div>Experiment</div>
+        </a>
+        <a href="/" class="flex justify-between">
+            <div>The real world is our first interfaces</div>
+            <div>Website</div>
+        </a>
+        <a href="/" class="flex justify-between">
+            <div>Framey</div>
+            <div>Extension</div>
+        </a>
+    </section>
+</Layout>

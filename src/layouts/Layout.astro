@@ -3,6 +3,8 @@ import '../styles/main.css';
 import { SEO } from 'astro-seo';
 import { defaultSeo } from '../data/seo';
 import { getSeo } from '../utils/seo';
+import { Image } from 'astro:assets';
+import logo from '../assets/images/logo.webp';
 
 interface Props {
     title: string;
@@ -44,10 +46,12 @@ const FONTS: string[] = [
         <!--/ FONTS -->
     </head>
     <body>
-        <main
-            id="swup"
-            class="transition-fade relative w-full min-h-[100dvh] overflow-hidden"
-        >
+        <nav class="fixed top-10 left-0 w-full h-fit z-header pointer-events-none">
+            <a href="/" class="absolute left-1/2 -translate-x-1/2 w-fit h-fit cursor-pointer pointer-events-auto">
+                <Image src={logo} width={30} height={30} alt="Design engineer logo." />
+            </a>
+        </nav>
+        <main id="swup" class="transition-fade relative w-full min-h-[100dvh] overflow-hidden">
             <slot />
         </main>
         <script src="../scripts/app.ts"></script>
