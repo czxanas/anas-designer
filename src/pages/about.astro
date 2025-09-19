@@ -5,6 +5,11 @@ import Layout from '../layouts/Layout.astro';
 import figma from '../assets/images/figma.webp';
 import openAi from '../assets/images/open-ai.webp';
 import github from '../assets/images/github.webp';
+import notion from '../assets/images/notion.webp';
+import jira from '../assets/images/jira.webp';
+import cursor from '../assets/images/cursor.webp';
+import vercel from '../assets/images/vercel.webp';
+import vscode from '../assets/images/vs-code.webp';
 
 const seo = {
     // title: 'Astro Boilerplate - Home',
@@ -71,8 +76,31 @@ const seo = {
     
     <section class="container max-w-xl leading-[1.2] flex flex-col gap-3.75 text-base mt-13.75 mb-30">
         <h2 class="text-white mb-5">Tools I use daily</h2>
-        <div class="grid grid-cols-4">
-            <Image src={figma} width={32} height={50} alt="Figma" />
+        <div class="grid grid-cols-4 items-center">
+            <div class="col-span-1 w-full aspect-3/2 flex items-center justify-center">
+                <Image src={figma} width={32} height={50} alt="Figma" />
+            </div>
+            <div class="col-span-1 w-full aspect-3/2 flex items-center justify-center">
+                <Image src={openAi} width={32} height={50} alt="OpenAi" />
+            </div>
+            <div class="col-span-1 w-full aspect-3/2 flex items-center justify-center">
+                <Image src={github} width={32} height={50} alt="Github" />
+            </div>
+            <div class="col-span-1 w-full aspect-3/2 flex items-center justify-center">
+                <Image src={notion} width={32} height={50} alt="Notion" />
+            </div>
+            <div class="col-span-1 w-full aspect-3/2 flex items-center justify-center">
+                <Image src={jira} width={32} height={50} alt="Jira" />
+            </div>
+            <div class="col-span-1 w-full aspect-3/2 flex items-center justify-center">
+                <Image src={cursor} width={32} height={50} alt="Cursor" />
+            </div>
+            <div class="col-span-1 w-full aspect-3/2 flex items-center justify-center">
+                <Image src={vercel} width={32} height={50} alt="Vercel" />
+            </div>
+            <div class="col-span-1 w-full aspect-3/2 flex items-center justify-center">
+                <Image src={vscode} width={32} height={50} alt="VS Code" />
+            </div>
         </div>
     </section>
 </Layout>
